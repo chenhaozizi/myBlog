@@ -3,20 +3,29 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>我的博客</title>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.4.0/marked.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js"></script>
+        <link rel="stylesheet" href="https://typo.sofi.sh/typo.css">
+      <style>
+        body{padding:20px}
+      </style>
 	</head>
 	<body>
-		<div id="app"></div>
-    
+		<div id="content"></div>
+      
 		<script>
-		var htmls=`
-         # 我的博客
-        *Jason*
-        > 这是第一句话哦
-        > 这是第二句话哦
-`                 var html= marked(htmls);
-			document.getElenmentById("app").innerHTML=html;
-			
-		</sciprt>
+          var markdown=`
+# 我的博客
+**Jason**
+## 第一个图片
+
+![](http://a.hiphotos.baidu.com/image/h%3D300/sign=36c798f424381f3081198ba999034c67/6159252dd42a28349c739cc757b5c9ea14cebf21.jpg)
+
+`
+          var html=markdown;
+document.getElementById("content").innerHTML=marked(html);
+          
+		</script>
+		
+		
 	</body>
 </html>
