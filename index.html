@@ -3,8 +3,19 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>我的博客</title>
+		<script src="https://cdn.bootcss.com/markdown.js/0.6.0-beta1/markdown.min.js"></script>
 	</head>
 	<body>
+		<div id="app"></div>
     这是内容 hahahhahahha
+		<script>
+			var html=`
+# 这是内容
+
+## 这是第一句话哦
+`                  markdown(html);
+			document.getelenmetById("app").innerHtml=html;
+			
+		</sciprt>
 	</body>
 </html>
