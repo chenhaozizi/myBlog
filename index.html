@@ -7,13 +7,12 @@
         <link rel="stylesheet" href="https://typo.sofi.sh/typo.css">
       <style>
         body{padding:20px}
+	      img{max-width:100%}
       </style>
 	</head>
 	<body>
-		<div id="content"></div>
-      
-		<script>
-          var markdown=`
+		<div id="content">
+		`
 # 我的博客
 **Jason**
 > 我们都是那么努力的生活着，希望一定有很多。
@@ -24,8 +23,13 @@
 
 
 `
-          var html=markdown;
-document.getElementById("content").innerHTML=marked(html);
+		
+		</div>
+      
+		<script>
+          var markdown=document.getElementById("content").innerHTML;
+     
+document.getElementById("content").innerHTML=marked(markdown);
           
 		</script>
 		
